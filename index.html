@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SignalDesk · BDR Prospecting Simulator</title><meta name="description" content="Practice account research, outreach, objection handling and AE handoffs in a fictional sales simulation."><link rel="stylesheet" href="style.css"><script type="module" src="app.mjs"></script></head>
+<body><header><a href="./" class="brand">SignalDesk</a><a href="https://mykeil-tzul.github.io/myke-portfolio/">Myke Tzul’s portfolio ↗</a></header>
+<main><section class="hero"><div><p class="eyebrow">BDR PROSPECTING SIMULATOR</p><h1>Who would you reach out to first?</h1><p>You sell a fictional checkout analytics product. Five accounts have new activity. You have time to work three.</p><a class="button primary" href="#research">Start prospecting</a></div><img src="assets/desk.jpg" alt="Notebook and coffee on a work table" width="960" height="400"></section>
+<div id="research" class="grid"><section class="panel"><h2>Account queue</h2><p>Adjust the weights, then shortlist up to three accounts.</p><div class="weights">
+<label>Product fit <input id="fit" type="range" min="0" max="10" value="5"><output for="fit" id="fit-value">5</output></label>
+<label>Signal strength <input id="signal" type="range" min="0" max="10" value="3"><output for="signal" id="signal-value">3</output></label>
+<label>Recency <input id="recency" type="range" min="0" max="10" value="2"><output for="recency" id="recency-value">2</output></label></div>
+<div id="accounts" class="accounts"></div><p id="shortlist" role="status"></p></section>
+<section class="panel" id="outreach"><h2>Write an opener</h2><p id="account-context">Choose an account in the queue.</p>
+<form id="opener"><label for="draft">Outreach draft</label><textarea id="draft" maxlength="700" rows="5" required placeholder="Mention the signal, connect it to a business problem, and ask one question."></textarea><button class="primary">Check draft and see reply</button></form>
+<ul id="feedback" aria-live="polite"></ul><div id="reply" hidden><h3>Prospect reply</h3><blockquote id="objection"></blockquote><label for="response">How would you respond?</label><select id="response"></select><button id="review" type="button" class="primary">Review my choices</button></div></section></div>
+<section class="panel" id="debrief" hidden><h2>Debrief &amp; AE handoff</h2><div class="grid"><div><h3>Your approach</h3><p id="yours"></p></div><div><h3>Suggested approach</h3><p id="suggestion"></p></div></div><dl id="handoff"></dl><button id="download" type="button">Download handoff</button></section>
+</main><footer>Fictional accounts and scripted replies. Drafts stay in this tab. <a href="https://github.com/Mykeil-tzul/signaldesk">GitHub ↗</a></footer></body></html>
